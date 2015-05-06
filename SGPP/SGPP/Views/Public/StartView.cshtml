@@ -1,0 +1,93 @@
+﻿@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+    ViewBag.Title = "Prueba Titulo";
+}
+        <div class="section_title_metro fluid_wrap">
+            <ul class="col-lg-8 pl0">
+                <li class="fl">
+                    <h1 class="the_title_metro">Configurar usuarios</h1>
+                </li>
+            </ul>
+        </div><!--end section_title-->
+
+        <div id="dashboard_right_column" class="right_column_metro col-lg-12 pr0 pl0">
+            <div class="drag_and_drop_container fluid_wrap reset doc_en_proceso">
+                <div class="drag_container_title">
+                    <h2>Información</h2>
+                </div><!--end drag_container_title-->
+
+                <div class="drag_container_the_content_area drag_content_area_fluid_wrap">
+                    <form id="" class="standard_form fluid_wrap">
+                        <ul class="form_items_container col-lg-4 pl0">
+                            <label class="subtitle_label">Información de Cliente</label>
+                            <li>
+                                <label for="localidad">Seleccione una compañia</label>
+                                <div class="dropdown fluid_wrap">
+                                    <select id="localidad" class="col-lg-12 form-control dropdown-select" name="localidad">
+                                        <option>-Selecciones-</option>
+                                        <option>Claro</option>
+                                        <option>Orange</option>
+                                        <option>Banco Popular</option>
+                                    </select>
+                                </div>
+                            </li>
+                            <li>
+                                <label for="nombre">Nombre</label>
+                                <input type="text" id="nombre" class="col-lg-12 form-control" name="nombre" value="" placeholder="" />
+                                <!--<span class="validation_error_tag">Datos incorrectos, vuelta a intentarlo</span>-->
+                            </li>
+                            <li>
+                                <label for="apellidos">Apellidos</label>
+                                <input type="text" id="apellidos" class="col-lg-12 form-control" name="apellidos" value="" placeholder="" />
+                            </li>
+                            <li>
+                                <label for="identificacion">Identificación</label>
+                                <div class="dropdown col-lg-5 pl0 pr0">
+                                    <select id="localidad" class="col-lg-12 form-control dropdown-select" name="identificacion">
+                                        <option>Pasaporte</option>
+                                        <option>Cedula</option>
+                                        <option>Licencia de conducir</option>
+                                    </select>
+                                </div>
+                                <input type="text" id="numero_doc" class="col-lg-7 mid_button form-control" name="numero_doc" value="" placeholder="" />
+                            </li>
+                            <li>
+                                <label for="sexo">Sexo</label>
+                                <div class="dropdown col-lg-5 pl0 pr0">
+                                    <select id="localidad" class="col-lg-12 form-control dropdown-select" name="sexo">
+                                        <option>Masculino</option>
+                                        <option>Femenino</option>
+                                    </select>
+                                </div>
+
+                            </li>
+
+
+                        </ul>
+
+                        <ul class="form_items_container col-lg-4 pr0">
+                            <label class="subtitle_label">Información de Credenciales</label>
+                            <li>
+                                <label for="salario">Correo</label>
+                                <input type="text" id="salario" class="col-lg-12 form-control" name="salario" value="" placeholder="" />
+                            </li>
+                            <li>
+                                <label for="empleado">Contraseña</label>
+                                <input type="text" id="empleado" class="col-lg-12 form-control" name="empleado" value="" placeholder="" />
+                            </li>
+                            <li>
+                                <label for="descripcion">Repetir contraseña</label>
+                                <input type="text" id="descripcion" class="col-lg-12 form-control" name="description" value="" placeholder="" />
+                            </li>
+                            </li>
+                            <li class="fr">
+                                <label for="descripcion">Contoles</label>
+                                <a href="#" class="button_go_back btstyles col-lg-3 fr mn">Volver</a>
+                                <input type="button" id="" class="button_save btstyles col-lg-3 fr mn mn_minus" value="Guardar">
+                            </li>
+                        </ul>
+
+                    </form><!--end eis_form-->
+                </div><!--end drag_container_the_content_area-->
+            </div><!--end drag_and_drop_container-->
+        </div><!--end dashboard_right_column-->

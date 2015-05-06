@@ -1,33 +1,28 @@
-C:\Users\Miguel Angel\documents\visual studio 2012\Projects\SGPP\SGPP\bin\SGPP.dll
-C:\Users\Miguel Angel\documents\visual studio 2012\Projects\SGPP\SGPP\bin\SGPP.pdb
-C:\Users\Miguel Angel\documents\visual studio 2012\Projects\SGPP\SGPP\bin\Antlr3.Runtime.dll
-C:\Users\Miguel Angel\documents\visual studio 2012\Projects\SGPP\SGPP\bin\EntityFramework.dll
-C:\Users\Miguel Angel\documents\visual studio 2012\Projects\SGPP\SGPP\bin\Microsoft.Web.Infrastructure.dll
-C:\Users\Miguel Angel\documents\visual studio 2012\Projects\SGPP\SGPP\bin\Newtonsoft.Json.dll
-C:\Users\Miguel Angel\documents\visual studio 2012\Projects\SGPP\SGPP\bin\System.Net.Http.Formatting.dll
-C:\Users\Miguel Angel\documents\visual studio 2012\Projects\SGPP\SGPP\bin\System.Web.Helpers.dll
-C:\Users\Miguel Angel\documents\visual studio 2012\Projects\SGPP\SGPP\bin\System.Web.Http.dll
-C:\Users\Miguel Angel\documents\visual studio 2012\Projects\SGPP\SGPP\bin\System.Web.Http.WebHost.dll
-C:\Users\Miguel Angel\documents\visual studio 2012\Projects\SGPP\SGPP\bin\System.Web.Mvc.dll
-C:\Users\Miguel Angel\documents\visual studio 2012\Projects\SGPP\SGPP\bin\System.Web.Optimization.dll
-C:\Users\Miguel Angel\documents\visual studio 2012\Projects\SGPP\SGPP\bin\System.Web.Razor.dll
-C:\Users\Miguel Angel\documents\visual studio 2012\Projects\SGPP\SGPP\bin\System.Web.WebPages.Deployment.dll
-C:\Users\Miguel Angel\documents\visual studio 2012\Projects\SGPP\SGPP\bin\System.Web.WebPages.dll
-C:\Users\Miguel Angel\documents\visual studio 2012\Projects\SGPP\SGPP\bin\System.Web.WebPages.Razor.dll
-C:\Users\Miguel Angel\documents\visual studio 2012\Projects\SGPP\SGPP\bin\WebGrease.dll
-C:\Users\Miguel Angel\documents\visual studio 2012\Projects\SGPP\SGPP\bin\Antlr3.Runtime.pdb
-C:\Users\Miguel Angel\documents\visual studio 2012\Projects\SGPP\SGPP\bin\EntityFramework.xml
-C:\Users\Miguel Angel\documents\visual studio 2012\Projects\SGPP\SGPP\bin\Newtonsoft.Json.xml
-C:\Users\Miguel Angel\documents\visual studio 2012\Projects\SGPP\SGPP\bin\System.Web.Optimization.xml
-C:\Users\Miguel Angel\documents\visual studio 2012\Projects\SGPP\SGPP\bin\System.Net.Http.Formatting.xml
-C:\Users\Miguel Angel\documents\visual studio 2012\Projects\SGPP\SGPP\bin\System.Web.Helpers.xml
-C:\Users\Miguel Angel\documents\visual studio 2012\Projects\SGPP\SGPP\bin\System.Web.Http.xml
-C:\Users\Miguel Angel\documents\visual studio 2012\Projects\SGPP\SGPP\bin\System.Web.Http.WebHost.xml
-C:\Users\Miguel Angel\documents\visual studio 2012\Projects\SGPP\SGPP\bin\System.Web.Mvc.xml
-C:\Users\Miguel Angel\documents\visual studio 2012\Projects\SGPP\SGPP\bin\System.Web.Razor.xml
-C:\Users\Miguel Angel\documents\visual studio 2012\Projects\SGPP\SGPP\bin\System.Web.WebPages.xml
-C:\Users\Miguel Angel\documents\visual studio 2012\Projects\SGPP\SGPP\bin\System.Web.WebPages.Deployment.xml
-C:\Users\Miguel Angel\documents\visual studio 2012\Projects\SGPP\SGPP\bin\System.Web.WebPages.Razor.xml
-C:\Users\Miguel Angel\documents\visual studio 2012\Projects\SGPP\SGPP\obj\Debug\SGPP.csprojResolveAssemblyReference.cache
-C:\Users\Miguel Angel\documents\visual studio 2012\Projects\SGPP\SGPP\obj\Debug\SGPP.dll
-C:\Users\Miguel Angel\documents\visual studio 2012\Projects\SGPP\SGPP\obj\Debug\SGPP.pdb
+D:\hermy\dropbox\Dropbox\proyectos\vs\projects\SGPP\SGPP\SGPP\bin\SGPP.dll.config
+D:\hermy\dropbox\Dropbox\proyectos\vs\projects\SGPP\SGPP\SGPP\bin\SGPP.dll
+D:\hermy\dropbox\Dropbox\proyectos\vs\projects\SGPP\SGPP\SGPP\bin\SGPP.pdb
+D:\hermy\dropbox\Dropbox\proyectos\vs\projects\SGPP\SGPP\SGPP\bin\Antlr3.Runtime.dll
+D:\hermy\dropbox\Dropbox\proyectos\vs\projects\SGPP\SGPP\SGPP\bin\EntityFramework.dll
+D:\hermy\dropbox\Dropbox\proyectos\vs\projects\SGPP\SGPP\SGPP\bin\EntityFramework.SqlServer.dll
+D:\hermy\dropbox\Dropbox\proyectos\vs\projects\SGPP\SGPP\SGPP\bin\Microsoft.Web.Infrastructure.dll
+D:\hermy\dropbox\Dropbox\proyectos\vs\projects\SGPP\SGPP\SGPP\bin\Microsoft.Web.Mvc.FixedDisplayModes.dll
+D:\hermy\dropbox\Dropbox\proyectos\vs\projects\SGPP\SGPP\SGPP\bin\Newtonsoft.Json.dll
+D:\hermy\dropbox\Dropbox\proyectos\vs\projects\SGPP\SGPP\SGPP\bin\System.Web.Mvc.dll
+D:\hermy\dropbox\Dropbox\proyectos\vs\projects\SGPP\SGPP\SGPP\bin\System.Web.Optimization.dll
+D:\hermy\dropbox\Dropbox\proyectos\vs\projects\SGPP\SGPP\SGPP\bin\System.Web.Providers.dll
+D:\hermy\dropbox\Dropbox\proyectos\vs\projects\SGPP\SGPP\SGPP\bin\System.Web.Razor.dll
+D:\hermy\dropbox\Dropbox\proyectos\vs\projects\SGPP\SGPP\SGPP\bin\System.Web.WebPages.Deployment.dll
+D:\hermy\dropbox\Dropbox\proyectos\vs\projects\SGPP\SGPP\SGPP\bin\System.Web.WebPages.dll
+D:\hermy\dropbox\Dropbox\proyectos\vs\projects\SGPP\SGPP\SGPP\bin\System.Web.WebPages.Razor.dll
+D:\hermy\dropbox\Dropbox\proyectos\vs\projects\SGPP\SGPP\SGPP\bin\WebGrease.dll
+D:\hermy\dropbox\Dropbox\proyectos\vs\projects\SGPP\SGPP\SGPP\bin\EntityFramework.xml
+D:\hermy\dropbox\Dropbox\proyectos\vs\projects\SGPP\SGPP\SGPP\bin\EntityFramework.SqlServer.xml
+D:\hermy\dropbox\Dropbox\proyectos\vs\projects\SGPP\SGPP\SGPP\bin\Newtonsoft.Json.xml
+D:\hermy\dropbox\Dropbox\proyectos\vs\projects\SGPP\SGPP\SGPP\bin\System.Web.Mvc.xml
+D:\hermy\dropbox\Dropbox\proyectos\vs\projects\SGPP\SGPP\SGPP\bin\System.Web.Razor.xml
+D:\hermy\dropbox\Dropbox\proyectos\vs\projects\SGPP\SGPP\SGPP\bin\System.Web.WebPages.xml
+D:\hermy\dropbox\Dropbox\proyectos\vs\projects\SGPP\SGPP\SGPP\bin\System.Web.WebPages.Deployment.xml
+D:\hermy\dropbox\Dropbox\proyectos\vs\projects\SGPP\SGPP\SGPP\bin\System.Web.WebPages.Razor.xml
+D:\hermy\dropbox\Dropbox\proyectos\vs\projects\SGPP\SGPP\SGPP\obj\Debug\SGPP.csprojResolveAssemblyReference.cache
+D:\hermy\dropbox\Dropbox\proyectos\vs\projects\SGPP\SGPP\SGPP\obj\Debug\SGPP.dll
+D:\hermy\dropbox\Dropbox\proyectos\vs\projects\SGPP\SGPP\SGPP\obj\Debug\SGPP.pdb

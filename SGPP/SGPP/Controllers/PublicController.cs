@@ -16,7 +16,7 @@ namespace SGPP.Controllers
 
         public ActionResult StartView()
         {
-
+            SGPPEntities db = new SGPPEntities();
             return View();
         }
 

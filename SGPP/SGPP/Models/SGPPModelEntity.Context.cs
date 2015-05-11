@@ -60,6 +60,8 @@ namespace SGPP.Models
         public virtual DbSet<V_Person> V_Person { get; set; }
         public virtual DbSet<V_Sex> V_Sex { get; set; }
         public virtual DbSet<V_Access> V_Access { get; set; }
+        public virtual DbSet<V_Tab> V_Tab { get; set; }
+        public virtual DbSet<V_Module> V_Module { get; set; }
     
         [DbFunction("SGPPEntities", "GetDetails")]
         public virtual IQueryable<GetDetails_Result> GetDetails(string prmHeader)

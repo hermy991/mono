@@ -20,7 +20,7 @@ namespace SGPP.Models
         public string FirstName { get; set; }
         public string LastName { get; set; }
         public int IDType_ID { get; set; }
-        public string TipoID { get; set; }
+        public string TypeDocument { get; set; }
         public string ID { get; set; }
         public int Sex_ID { get; set; }
         public string Sexo { get; set; }

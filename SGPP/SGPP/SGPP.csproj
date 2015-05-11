@@ -257,10 +257,16 @@
     <Compile Include="Models\V_DocumentType.cs">
       <DependentUpon>SGPPModelEntity.tt</DependentUpon>
     </Compile>
+    <Compile Include="Models\V_Module.cs">
+      <DependentUpon>SGPPModelEntity.tt</DependentUpon>
+    </Compile>
     <Compile Include="Models\V_Person.cs">
       <DependentUpon>SGPPModelEntity.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\V_Sex.cs">
+      <DependentUpon>SGPPModelEntity.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\V_Tab.cs">
       <DependentUpon>SGPPModelEntity.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\Warranty.cs">

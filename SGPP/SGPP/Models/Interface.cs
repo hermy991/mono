@@ -25,7 +25,7 @@ namespace SGPP.Models
         public string URL { get; set; }
         public int Module_ID { get; set; }
         public int Tab_ID { get; set; }
-        public int Languaje_ID { get; set; }
+        public string Languaje { get; set; }
         public string Order { get; set; }
         public bool Active { get; set; }
         public int CreatedBy_ID { get; set; }
@@ -34,5 +34,7 @@ namespace SGPP.Models
         public Nullable<System.DateTime> ModifiedDate { get; set; }
     
         public virtual ICollection<Permission> Permissions { get; set; }
+        public virtual Detail Detail { get; set; }
+        public virtual Detail Detail1 { get; set; }
     }
 }

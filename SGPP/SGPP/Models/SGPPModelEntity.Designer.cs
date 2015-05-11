@@ -1,4 +1,4 @@
-﻿// T4 code generation is enabled for model 'D:\hermy\dropbox\Dropbox\proyectos\vs\projects\SGPP\SGPP\SGPP\Models\SGPPModelEntity.edmx'. 
+﻿// T4 code generation is enabled for model 'D:\hermy\proyectos\mono\trunk\SGPP\SGPP\Models\SGPPModelEntity.edmx'. 
 // To enable legacy code generation, change the value of the 'Code Generation Strategy' designer
 // property to 'Legacy ObjectContext'. This property is available in the Properties Window when the model
 // is open in the designer.

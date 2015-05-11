@@ -336,7 +336,7 @@ warning 6002: The table/view 'SGPP.DEF.Contact' does not have a primary key defi
     <Property Name="URL" Type="varchar" MaxLength="500" />
     <Property Name="Module_ID" Type="int" Nullable="false" />
     <Property Name="Tab_ID" Type="int" Nullable="false" />
-    <Property Name="Languaje_ID" Type="int" Nullable="false" />
+    <Property Name="Languaje" Type="varchar" MaxLength="1" StoreGeneratedPattern="Computed" Nullable="false" />
     <Property Name="Order" Type="varchar" MaxLength="50" Nullable="false" />
     <Property Name="Active" Type="bit" Nullable="false" />
     <Property Name="CreatedBy_ID" Type="int" Nullable="false" />
@@ -421,9 +421,11 @@ warning 6002: The table/view 'SGPP.DEF.V_DocumentType' does not have a primary k
     <Key>
       <PropertyRef Name="IDType_ID" />
       <PropertyRef Name="DocumentType" />
+      <PropertyRef Name="Order" />
     </Key>
     <Property Name="IDType_ID" Type="int" Nullable="false" />
     <Property Name="DocumentType" Type="varchar" MaxLength="500" Nullable="false" />
+    <Property Name="Order" Type="int" Nullable="false" />
   </EntityType>
   <!--Errors Found During Generation:
 warning 6002: The table/view 'SGPP.DEF.V_Person' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
@@ -435,7 +437,7 @@ warning 6002: The table/view 'SGPP.DEF.V_Person' does not have a primary key def
       <PropertyRef Name="FirstName" />
       <PropertyRef Name="LastName" />
       <PropertyRef Name="IDType_ID" />
-      <PropertyRef Name="TipoID" />
+      <PropertyRef Name="TypeDocument" />
       <PropertyRef Name="ID" />
       <PropertyRef Name="Sex_ID" />
       <PropertyRef Name="Sexo" />
@@ -448,7 +450,7 @@ warning 6002: The table/view 'SGPP.DEF.V_Person' does not have a primary key def
     <Property Name="FirstName" Type="varchar" MaxLength="100" Nullable="false" />
     <Property Name="LastName" Type="varchar" MaxLength="100" Nullable="false" />
     <Property Name="IDType_ID" Type="int" Nullable="false" />
-    <Property Name="TipoID" Type="varchar" MaxLength="500" Nullable="false" />
+    <Property Name="TypeDocument" Type="varchar" MaxLength="500" Nullable="false" />
     <Property Name="ID" Type="char" MaxLength="11" Nullable="false" />
     <Property Name="Sex_ID" Type="int" Nullable="false" />
     <Property Name="Sexo" Type="varchar" MaxLength="500" Nullable="false" />
@@ -463,9 +465,11 @@ warning 6002: The table/view 'SGPP.DEF.V_Sex' does not have a primary key define
     <Key>
       <PropertyRef Name="Sex_ID" />
       <PropertyRef Name="SexName" />
+      <PropertyRef Name="Order" />
     </Key>
     <Property Name="Sex_ID" Type="int" Nullable="false" />
     <Property Name="SexName" Type="varchar" MaxLength="500" Nullable="false" />
+    <Property Name="Order" Type="int" Nullable="false" />
   </EntityType>
   <!--Errors Found During Generation:
 warning 6002: The table/view 'SGPP.UC.V_Access' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
@@ -473,9 +477,39 @@ warning 6002: The table/view 'SGPP.UC.V_Access' does not have a primary key defi
     <Key>
       <PropertyRef Name="Access_ID" />
       <PropertyRef Name="AccessName" />
+      <PropertyRef Name="Order" />
     </Key>
     <Property Name="Access_ID" Type="int" Nullable="false" />
     <Property Name="AccessName" Type="varchar" MaxLength="500" Nullable="false" />
+    <Property Name="Order" Type="int" Nullable="false" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'SGPP.UC.V_Module' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="V_Module">
+    <Key>
+      <PropertyRef Name="Module_ID" />
+      <PropertyRef Name="Html_ID" />
+      <PropertyRef Name="ModuleName" />
+      <PropertyRef Name="Order" />
+    </Key>
+    <Property Name="Module_ID" Type="int" Nullable="false" />
+    <Property Name="Html_ID" Type="varchar" MaxLength="500" Nullable="false" />
+    <Property Name="ModuleName" Type="varchar" MaxLength="500" Nullable="false" />
+    <Property Name="Order" Type="int" Nullable="false" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'SGPP.UC.V_Tab' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="V_Tab">
+    <Key>
+      <PropertyRef Name="Tab_ID" />
+      <PropertyRef Name="Html_ID" />
+      <PropertyRef Name="TabName" />
+      <PropertyRef Name="Order" />
+    </Key>
+    <Property Name="Tab_ID" Type="int" Nullable="false" />
+    <Property Name="Html_ID" Type="varchar" MaxLength="500" Nullable="false" />
+    <Property Name="TabName" Type="varchar" MaxLength="500" Nullable="false" />
+    <Property Name="Order" Type="int" Nullable="false" />
   </EntityType>
   <Association Name="FK_City_Region">
     <End Role="Region" Type="Self.Region" Multiplicity="1" />
@@ -486,18 +520,6 @@ warning 6002: The table/view 'SGPP.UC.V_Access' does not have a primary key defi
       </Principal>
       <Dependent Role="City">
         <PropertyRef Name="Region_ID" />
-      </Dependent>
-    </ReferentialConstraint>
-  </Association>
-  <Association Name="fk_cu_permission_cu_program">
-    <End Role="Interface" Type="Self.Interface" Multiplicity="1" />
-    <End Role="Permission" Type="Self.Permission" Multiplicity="*" />
-    <ReferentialConstraint>
-      <Principal Role="Interface">
-        <PropertyRef Name="Interface_ID" />
-      </Principal>
-      <Dependent Role="Permission">
-        <PropertyRef Name="Interface_ID" />
       </Dependent>
     </ReferentialConstraint>
   </Association>
@@ -522,6 +544,30 @@ warning 6002: The table/view 'SGPP.UC.V_Access' does not have a primary key defi
       </Principal>
       <Dependent Role="Detail">
         <PropertyRef Name="Header_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Interface_DetailModule">
+    <End Role="Detail" Type="Self.Detail" Multiplicity="1" />
+    <End Role="Interface" Type="Self.Interface" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Detail">
+        <PropertyRef Name="Detail_ID" />
+      </Principal>
+      <Dependent Role="Interface">
+        <PropertyRef Name="Module_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Interface_DetailTab">
+    <End Role="Detail" Type="Self.Detail" Multiplicity="1" />
+    <End Role="Interface" Type="Self.Interface" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Detail">
+        <PropertyRef Name="Detail_ID" />
+      </Principal>
+      <Dependent Role="Interface">
+        <PropertyRef Name="Tab_ID" />
       </Dependent>
     </ReferentialConstraint>
   </Association>
@@ -558,6 +604,18 @@ warning 6002: The table/view 'SGPP.UC.V_Access' does not have a primary key defi
       </Principal>
       <Dependent Role="Permission">
         <PropertyRef Name="Company_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Permission_Program">
+    <End Role="Interface" Type="Self.Interface" Multiplicity="1" />
+    <End Role="Permission" Type="Self.Permission" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Interface">
+        <PropertyRef Name="Interface_ID" />
+      </Principal>
+      <Dependent Role="Permission">
+        <PropertyRef Name="Interface_ID" />
       </Dependent>
     </ReferentialConstraint>
   </Association>
@@ -840,7 +898,8 @@ warning 6002: The table/view 'SGPP.UC.V_Access' does not have a primary key defi
     <EntitySet Name="V_DocumentType" EntityType="Self.V_DocumentType" store:Type="Views" store:Schema="DEF">
       <DefiningQuery>SELECT 
     [V_DocumentType].[IDType_ID] AS [IDType_ID], 
-    [V_DocumentType].[DocumentType] AS [DocumentType]
+    [V_DocumentType].[DocumentType] AS [DocumentType], 
+    [V_DocumentType].[Order] AS [Order]
     FROM [DEF].[V_DocumentType] AS [V_DocumentType]</DefiningQuery>
     </EntitySet>
     <EntitySet Name="V_Person" EntityType="Self.V_Person" store:Type="Views" store:Schema="DEF">
@@ -851,7 +910,7 @@ warning 6002: The table/view 'SGPP.UC.V_Access' does not have a primary key defi
     [V_Person].[FirstName] AS [FirstName], 
     [V_Person].[LastName] AS [LastName], 
     [V_Person].[IDType_ID] AS [IDType_ID], 
-    [V_Person].[TipoID] AS [TipoID], 
+    [V_Person].[TypeDocument] AS [TypeDocument], 
     [V_Person].[ID] AS [ID], 
     [V_Person].[Sex_ID] AS [Sex_ID], 
     [V_Person].[Sexo] AS [Sexo], 
@@ -864,22 +923,36 @@ warning 6002: The table/view 'SGPP.UC.V_Access' does not have a primary key defi
     <EntitySet Name="V_Sex" EntityType="Self.V_Sex" store:Type="Views" store:Schema="DEF">
       <DefiningQuery>SELECT 
     [V_Sex].[Sex_ID] AS [Sex_ID], 
-    [V_Sex].[SexName] AS [SexName]
+    [V_Sex].[SexName] AS [SexName], 
+    [V_Sex].[Order] AS [Order]
     FROM [DEF].[V_Sex] AS [V_Sex]</DefiningQuery>
     </EntitySet>
     <EntitySet Name="V_Access" EntityType="Self.V_Access" store:Type="Views" store:Schema="UC">
       <DefiningQuery>SELECT 
     [V_Access].[Access_ID] AS [Access_ID], 
-    [V_Access].[AccessName] AS [AccessName]
+    [V_Access].[AccessName] AS [AccessName], 
+    [V_Access].[Order] AS [Order]
     FROM [UC].[V_Access] AS [V_Access]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="V_Module" EntityType="Self.V_Module" store:Type="Views" store:Schema="UC">
+      <DefiningQuery>SELECT 
+    [V_Module].[Module_ID] AS [Module_ID], 
+    [V_Module].[Html_ID] AS [Html_ID], 
+    [V_Module].[ModuleName] AS [ModuleName], 
+    [V_Module].[Order] AS [Order]
+    FROM [UC].[V_Module] AS [V_Module]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="V_Tab" EntityType="Self.V_Tab" store:Type="Views" store:Schema="UC">
+      <DefiningQuery>SELECT 
+    [V_Tab].[Tab_ID] AS [Tab_ID], 
+    [V_Tab].[Html_ID] AS [Html_ID], 
+    [V_Tab].[TabName] AS [TabName], 
+    [V_Tab].[Order] AS [Order]
+    FROM [UC].[V_Tab] AS [V_Tab]</DefiningQuery>
     </EntitySet>
     <AssociationSet Name="FK_City_Region" Association="Self.FK_City_Region">
       <End Role="Region" EntitySet="Region" />
       <End Role="City" EntitySet="City" />
-    </AssociationSet>
-    <AssociationSet Name="fk_cu_permission_cu_program" Association="Self.fk_cu_permission_cu_program">
-      <End Role="Interface" EntitySet="Interface" />
-      <End Role="Permission" EntitySet="Permission" />
     </AssociationSet>
     <AssociationSet Name="FK_Customer_Person" Association="Self.FK_Customer_Person">
       <End Role="Person" EntitySet="Person" />
@@ -888,6 +961,14 @@ warning 6002: The table/view 'SGPP.UC.V_Access' does not have a primary key defi
     <AssociationSet Name="FK_Detail_Header" Association="Self.FK_Detail_Header">
       <End Role="Header" EntitySet="Header" />
       <End Role="Detail" EntitySet="Detail" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Interface_DetailModule" Association="Self.FK_Interface_DetailModule">
+      <End Role="Detail" EntitySet="Detail" />
+      <End Role="Interface" EntitySet="Interface" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Interface_DetailTab" Association="Self.FK_Interface_DetailTab">
+      <End Role="Detail" EntitySet="Detail" />
+      <End Role="Interface" EntitySet="Interface" />
     </AssociationSet>
     <AssociationSet Name="FK_Password_DetailStatus" Association="Self.FK_Password_DetailStatus">
       <End Role="Detail" EntitySet="Detail" />
@@ -899,6 +980,10 @@ warning 6002: The table/view 'SGPP.UC.V_Access' does not have a primary key defi
     </AssociationSet>
     <AssociationSet Name="FK_Permission_Company" Association="Self.FK_Permission_Company">
       <End Role="Company" EntitySet="Company" />
+      <End Role="Permission" EntitySet="Permission" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Permission_Program" Association="Self.FK_Permission_Program">
+      <End Role="Interface" EntitySet="Interface" />
       <End Role="Permission" EntitySet="Permission" />
     </AssociationSet>
     <AssociationSet Name="FK_Permission_User" Association="Self.FK_Permission_User">

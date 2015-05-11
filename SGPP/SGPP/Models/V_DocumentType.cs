@@ -16,5 +16,6 @@ namespace SGPP.Models
     {
         public int IDType_ID { get; set; }
         public string DocumentType { get; set; }
+        public int Order { get; set; }
     }
 }

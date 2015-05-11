@@ -16,5 +16,6 @@ namespace SGPP.Models
     {
         public int Sex_ID { get; set; }
         public string SexName { get; set; }
+        public int Order { get; set; }
     }
 }

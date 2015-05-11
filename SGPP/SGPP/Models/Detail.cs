@@ -21,6 +21,8 @@ namespace SGPP.Models
             this.People1 = new HashSet<Person>();
             this.Users = new HashSet<User>();
             this.Users1 = new HashSet<User>();
+            this.Interfaces = new HashSet<Interface>();
+            this.Interfaces1 = new HashSet<Interface>();
         }
     
         public int Detail_ID { get; set; }
@@ -42,5 +44,7 @@ namespace SGPP.Models
         public virtual ICollection<Person> People1 { get; set; }
         public virtual ICollection<User> Users { get; set; }
         public virtual ICollection<User> Users1 { get; set; }
+        public virtual ICollection<Interface> Interfaces { get; set; }
+        public virtual ICollection<Interface> Interfaces1 { get; set; }
     }
 }

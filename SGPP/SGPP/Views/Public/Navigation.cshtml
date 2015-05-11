@@ -1,49 +1,154 @@
 ﻿@*<!DOCTYPE html>
 
-<html>
-<head>
-    <meta name="viewport" content="width=device-width" />
-    <title>@ViewBag.Title</title>
-</head>
-<body>
-    <div>
-        @RenderBody()
-    </div>
-</body>
-</html>*@
+
+    <html>
+    <head>
+        <meta name="viewport" content="width=device-width" />
+        <title>@ViewBag.Title</title>
+    </head>
+    <body>
+        <div>
+            @RenderBody()
+        </div>
+    </body>
+    </html>*@
+
+
+@*
+    * Author: Hermy Garcia
+    * File: Navigation.cshtml
+    *
+*@
+
+@using SGPP.Models;
+
+@{
+    //var myHtmlString = new HtmlString(mystring);
+
+    SGPPEntities db = new SGPPEntities();
+    //List<Interface> interfaces = db.Interfaces.ToList().OrderBy(inter => inter.Order).ToList();
+    List<V_Module> modules = db.V_Module.OrderBy(mod => mod.Order).ToList();
+    List<V_Tab> tabs = db.V_Tab.OrderBy(tab => tab.Order).ToList();
+    List<Interface> interfaces = db.Interfaces.OrderBy(inter => inter.Detail.Order).OrderBy(inter => inter.Detail1.Order).OrderBy(inter => inter.Order).ToList();
+    
+    
+
+}
+
+
+@*@Html.Raw(  )*@
 
 <div id="aside_navigation" class="open_menu close_menu">
     <div id="logotipo_wrap" class="nav_sections">
         <a id="logotipo" href="#">Logotipo</a>
     </div><!--end nav_sections-->
-
-    <div class="nav_sections">
-        <ul class="navigation">
-            <li><a href="#" id="user_info_display"><div id="user_inf"></div><span>User information</span></a></li>
-        </ul>
-        <!--<div id="user_information_wrap">
-            <ul id="user_info">
-                <li><div id="user_pic"><img src="../images/user_picture-2.png" width="80" height="63"/></div></li>
-                <li><a id="user_name" href="#">wventura@eisdr.com</a></li>
-                <li><a id="user_account_info" href="#">My Account</a></li>
-                <li><a id="bt_off" title="Log out">Logout</a></li>
+    @*<div class="nav_sections">
+            <ul class="navigation">
+                <li><a href="#" id="user_info_display"><div id="user_inf"></div><span>Interfaces</span></a></li>
             </ul>
-        </div>-->
-    </div><!--end nav_sections-->
+            <!--<div id="user_information_wrap">
+                <ul id="user_info">
+                    <li><div id="user_pic"><img src="../images/user_picture-2.png" width="80" height="63"/></div></li>
+                    <li><a id="user_name" href="#">wventura@eisdr.com</a></li>
+                    <li><a id="user_account_info" href="#">My Account</a></li>
+                    <li><a id="bt_off" title="Log out">Logout</a></li>
+                </ul>
+            </div>-->
+        </div><!--end nav_sections-->*@
 
     <div class="nav_sections">
         <div id="accordion">
+
+
+
+
+@{
+
+    int tab_id = 0;
+    foreach(V_Module mod in modules){
+
+            
+                    Html.Raw(@""
+ +"            <h3>"
+ +"            <ul class='navigation'> "
+ +"               <li>"
+ +"                   <div id='"+ mod.Html_ID +"'></div><span>"+ mod.ModuleName +"</span>"
+ +"                   <ul class='sub_navigation'>");
+
+
+     foreach(Interface inter in interfaces){
+                        if(tab_id != inter.Tab_ID){
+                            tab_id = inter.Tab_ID;
+                            Html.Raw(@""
++"                          <li><a href='#'>"+ inter.Detail1.DisplayName +"</a></li>");
+                        }
+                        Html.Raw(@""
++"                        <li><a href='"+ inter.URL +"'>"+ inter.DisplayName +"</a></li>");
+    
+                            
+     }
+
+
+
+     Html.Raw(@""
++ "                    </ul>"
++ "                </li>"
++ "            </ul><!--navigation-->"
++ "            </h3>");
+
+            //<ul class="navigation">
+            //    <li><a href="#"><div id="user_logs"></div><span>Item1</span></a></li>
+            //    <li><a href="#"><div id="ae"></div><span>Item2</span></a></li>
+            //    <li><a href="#"><div id="assing_study"></div><span>Item3</span></a></li>
+            //    <li><a href="#"><div id="picture_manager"></div><span>Item4</span></a></li>
+            //</ul>
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
             <h3>
                 <ul class="navigation">
-                    <li><div id="repports"></div><span>Section 1</span></li>
+                    <li>
+                        <div id="user_management"></div><span>Section S</span>
+                        <ul class="sub_navigation">
+                            <li><a href="#">Item1</a></li>
+                            <li><a href="#">Item2</a></li>
+                            <li><a href="#">Item3</a></li>
+                            <li><a href="#">Item4</a></li>
+                        </ul>
+                    </li>
                 </ul>
             </h3>
             <ul class="navigation">
                 <li><a href="#"><div id="user_logs"></div><span>Item1</span></a></li>
-                <li><a href="#"><div id="ae"></div><span>Item1</span></a></li>
-                <li><a href="#"><div id="assing_study"></div><span>Item1</span></a></li>
-                <li><a href="#"><div id="picture_manager"></div><span>Item1</span></a></li>
+                <li><a href="#"><div id="ae"></div><span>Item2</span></a></li>
+                <li><a href="#"><div id="assing_study"></div><span>Item3</span></a></li>
+                <li><a href="#"><div id="picture_manager"></div><span>Item4</span></a></li>
+
             </ul>
+
+
+
+
+
+
+
+
+
+
+
             <h3>
                 <ul class="navigation">
                     <li>
@@ -64,7 +169,41 @@
                 <li><a href="#"><div id="picture_manager"></div><span>Item4</span></a></li>
 
             </ul>
+
+
+
+
+
+
             <h3>
+                <ul class="navigation">
+                    <li>
+                        <div id="user_management"></div><span>Section 3</span>
+                        <ul class="sub_navigation">
+                            <li><a href="#">Item1</a></li>
+                            <li><a href="#">Item2</a></li>
+                            <li><a href="#">Item3</a></li>
+                            <li><a href="#">Item4</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </h3>
+            <ul class="navigation">
+                <li><a href="#"><div id="user_logs"></div><span>Item1</span></a></li>
+                <li><a href="#"><div id="ae"></div><span>Item2</span></a></li>
+                <li><a href="#"><div id="assing_study"></div><span>Item3</span></a></li>
+                <li><a href="#"><div id="picture_manager"></div><span>Item4</span></a></li>
+
+            </ul>
+
+
+
+
+
+
+
+
+            @*<h3>
                 <ul class="navigation">
                     <li><div id="study"></div><span>Section 3</span></li>
                 </ul>
@@ -87,12 +226,16 @@
                 <li><a href="#"><div id="assing_study"></div><span>Item1</span></a></li>
                 <li><a href="#"><div id="picture_manager"></div><span>Item1</span></a></li>
                 <li><a href="#"><div id="study"></div><span>Dropdown Menú</span></a>
-            </ul>
-        </div>
+            </ul>*@
+
+
+
+
+
+        </div><!--accordion-->
         <ul class="navigation">
             <li id="colapsar_menu"><a href="#" class="close_menu" data-status="open"><div id="colapsar_nav"></div><span>Collapse menu</span></a></li>
         </ul>
     </div><!--end aside_navigation-->
 </div><!--end aside_navigation-->
-
 @*@RenderBody()*@

@@ -16,5 +16,6 @@ namespace SGPP.Models
     {
         public int Access_ID { get; set; }
         public string AccessName { get; set; }
+        public int Order { get; set; }
     }
 }

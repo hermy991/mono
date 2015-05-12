@@ -30,8 +30,8 @@
     List<V_Module> modules = db.V_Module.OrderBy(mod => mod.Order).ToList();
     List<V_Tab> tabs = db.V_Tab.OrderBy(tab => tab.Order).ToList();
     List<Interface> interfaces = db.Interfaces.OrderBy(inter => inter.Detail.Order).OrderBy(inter => inter.Detail1.Order).OrderBy(inter => inter.Order).ToList();
-    
-    
+
+
 
 }
 
@@ -62,63 +62,83 @@
 
 
 
-@{
+            @{
 
-    int tab_id = 0;
-    foreach(V_Module mod in modules){
+                int tab_id = 0;
+                foreach (V_Module mod in modules)
+                {
 
-            
+
                     Html.Raw(@""
- +"            <h3>"
- +"            <ul class='navigation'> "
- +"               <li>"
- +"                   <div id='"+ mod.Html_ID +"'></div><span>"+ mod.ModuleName +"</span>"
- +"                   <ul class='sub_navigation'>");
+ + "            <h3>"
+ + "            <ul class='navigation'> "
+ + "               <li>"
+ + "                   <div id='" + mod.Html_ID + "'></div><span>" + mod.ModuleName + "</span>"
+ + "                   <ul class='sub_navigation'>");
 
 
-     foreach(Interface inter in interfaces){
-                        if(tab_id != inter.Tab_ID){
+                    foreach (Interface inter in interfaces)
+                    {
+                        if (tab_id != inter.Tab_ID)
+                        {
                             tab_id = inter.Tab_ID;
                             Html.Raw(@""
-+"                          <li><a href='#'>"+ inter.Detail1.DisplayName +"</a></li>");
++ "                          <li><a href='#'>" + inter.Detail1.DisplayName + "</a></li>");
                         }
                         Html.Raw(@""
-+"                        <li><a href='"+ inter.URL +"'>"+ inter.DisplayName +"</a></li>");
-    
-                            
-     }
++ "                        <li><a href='" + inter.URL + "'>" + inter.DisplayName + "</a></li>");
+
+
+                    }
 
 
 
-     Html.Raw(@""
-+ "                    </ul>"
-+ "                </li>"
-+ "            </ul><!--navigation-->"
-+ "            </h3>");
+                    Html.Raw(@""
+               + "                    </ul>"
+               + "                </li>"
+               + "            </ul><!--navigation-->"
+               + "            </h3>");
 
-            //<ul class="navigation">
-            //    <li><a href="#"><div id="user_logs"></div><span>Item1</span></a></li>
-            //    <li><a href="#"><div id="ae"></div><span>Item2</span></a></li>
-            //    <li><a href="#"><div id="assing_study"></div><span>Item3</span></a></li>
-            //    <li><a href="#"><div id="picture_manager"></div><span>Item4</span></a></li>
-            //</ul>
-    }
-}
+                    tab_id = 0;
 
-
-
-
-
-
+                    foreach (Interface inter in interfaces)
+                    {
+                        if (tab_id != inter.Tab_ID)
+                        {
+                            tab_id = inter.Tab_ID;
+                            Html.Raw(@""
++ "                        <li><a href='#'><div id='user_logs'></div><span>"+ inter.Detail1.DisplayName +"</span></a></li>");
+                        }
+                        Html.Raw(@""
++ "                        <li><a href='"+inter.URL+"'><div id='user_logs'></div><span>"+ inter.DisplayName +"</span></a></li>");
 
 
+                    }
+                    
+                    
+                    //<ul class="navigation">
+                    //    <li><a href="#"><div id="user_logs"></div><span>Item1</span></a></li>
+                    //    <li><a href="#"><div id="ae"></div><span>Item2</span></a></li>
+                    //    <li><a href="#"><div id="assing_study"></div><span>Item3</span></a></li>
+                    //    <li><a href="#"><div id="picture_manager"></div><span>Item4</span></a></li>
+                    //</ul>
+                }
+            }
 
 
 
 
 
 
-            <h3>
+
+
+
+
+
+
+
+
+            @*<h3>
                 <ul class="navigation">
                     <li>
                         <div id="user_management"></div><span>Section S</span>
@@ -194,7 +214,7 @@
                 <li><a href="#"><div id="assing_study"></div><span>Item3</span></a></li>
                 <li><a href="#"><div id="picture_manager"></div><span>Item4</span></a></li>
 
-            </ul>
+            </ul>*@
 
 
 
@@ -204,29 +224,29 @@
 
 
             @*<h3>
+                    <ul class="navigation">
+                        <li><div id="study"></div><span>Section 3</span></li>
+                    </ul>
+                </h3>
                 <ul class="navigation">
-                    <li><div id="study"></div><span>Section 3</span></li>
+                    <li><a href="#"><div id="user_logs"></div><span>Item1</span></a></li>
+                    <li><a href="#"><div id="ae"></div><span>Item1</span></a></li>
+                    <li><a href="#"><div id="assing_study"></div><span>Item1</span></a></li>
+                    <li><a href="#"><div id="picture_manager"></div><span>Item1</span></a></li>
+                    <li><a href="#"><div id="study"></div><span>Dropdown Menú</span></a>
                 </ul>
-            </h3>
-            <ul class="navigation">
-                <li><a href="#"><div id="user_logs"></div><span>Item1</span></a></li>
-                <li><a href="#"><div id="ae"></div><span>Item1</span></a></li>
-                <li><a href="#"><div id="assing_study"></div><span>Item1</span></a></li>
-                <li><a href="#"><div id="picture_manager"></div><span>Item1</span></a></li>
-                <li><a href="#"><div id="study"></div><span>Dropdown Menú</span></a>
-            </ul>
-            <h3>
+                <h3>
+                    <ul class="navigation">
+                        <li><div id="groups"></div><span>Section 4</span></li>
+                    </ul>
+                </h3>
                 <ul class="navigation">
-                    <li><div id="groups"></div><span>Section 4</span></li>
-                </ul>
-            </h3>
-            <ul class="navigation">
-                <li><a href="#"><div id="user_logs"></div><span>Item1</span></a></li>
-                <li><a href="#"><div id="ae"></div><span>Item1</span></a></li>
-                <li><a href="#"><div id="assing_study"></div><span>Item1</span></a></li>
-                <li><a href="#"><div id="picture_manager"></div><span>Item1</span></a></li>
-                <li><a href="#"><div id="study"></div><span>Dropdown Menú</span></a>
-            </ul>*@
+                    <li><a href="#"><div id="user_logs"></div><span>Item1</span></a></li>
+                    <li><a href="#"><div id="ae"></div><span>Item1</span></a></li>
+                    <li><a href="#"><div id="assing_study"></div><span>Item1</span></a></li>
+                    <li><a href="#"><div id="picture_manager"></div><span>Item1</span></a></li>
+                    <li><a href="#"><div id="study"></div><span>Dropdown Menú</span></a>
+                </ul>*@
 
 
 

@@ -60,9 +60,9 @@
         <div id="accordion">
 
 
+        
 
-
-            @{
+            @*@{
 
                 int tab_id = 0;
                 foreach (V_Module mod in modules)
@@ -123,41 +123,10 @@
                     //    <li><a href="#"><div id="picture_manager"></div><span>Item4</span></a></li>
                     //</ul>
                 }
-            }
+            }*@
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-            @*<h3>
-                <ul class="navigation">
-                    <li>
-                        <div id="user_management"></div><span>Section S</span>
-                        <ul class="sub_navigation">
-                            <li><a href="#">Item1</a></li>
-                            <li><a href="#">Item2</a></li>
-                            <li><a href="#">Item3</a></li>
-                            <li><a href="#">Item4</a></li>
-                        </ul>
-                    </li>
-                </ul>
-            </h3>
-            <ul class="navigation">
-                <li><a href="#"><div id="user_logs"></div><span>Item1</span></a></li>
-                <li><a href="#"><div id="ae"></div><span>Item2</span></a></li>
-                <li><a href="#"><div id="assing_study"></div><span>Item3</span></a></li>
-                <li><a href="#"><div id="picture_manager"></div><span>Item4</span></a></li>
-
-            </ul>
 
 
 
@@ -172,21 +141,75 @@
             <h3>
                 <ul class="navigation">
                     <li>
-                        <div id="user_management"></div><span>Section 2</span>
+                        <div id="user_management" class="module"></div><span>Prestamos</span>
                         <ul class="sub_navigation">
-                            <li><a href="#">Item1</a></li>
-                            <li><a href="#">Item2</a></li>
-                            <li><a href="#">Item3</a></li>
-                            <li><a href="#">Item4</a></li>
+                            <li><a href="#">Entrada de Datos</a></li>
+                            <li><a href="#">Registro de Contrato</a></li>
+                            <li><a href="#">Registro de Cliente</a></li>
+                            <li><a href="#">Recibo Definitivo</a></li>
+                            <li><a href="#">Gestion de Cobro</a></li>
+                            <li><a href="#">Cuadre del Cobrador</a></li>
+                            <li><a href="#">Consultas</a></li>
+                            <li><a href="#">Creditos Vigentes</a></li>
+                            <li><a href="#">Estado Cuenta</a></li>
+                            <li><a href="#">Clientes</a></li>
                         </ul>
                     </li>
                 </ul>
             </h3>
             <ul class="navigation">
-                <li><a href="#"><div id="user_logs"></div><span>Item1</span></a></li>
-                <li><a href="#"><div id="ae"></div><span>Item2</span></a></li>
-                <li><a href="#"><div id="assing_study"></div><span>Item3</span></a></li>
-                <li><a href="#"><div id="picture_manager"></div><span>Item4</span></a></li>
+                <li><a href="#"><div id="entrada_datos" class="tab" ></div>        <span>Entrada de Datos</span></a></li>
+                <li><a href="#"><div id="ae" ></div>               <span class="interface" >Registro de Contrato</span></a></li>
+                <li><a href="#"><div id="assing_study"></div>     <span class="interface">Registro de Cliente</span></a></li>
+                <li><a href="#"><div id="picture_manager"></div>  <span class="interface">Recibo Definitivo</span></a></li>
+                <li><a href="#"><div id="picture_manager"></div>  <span class ="interface">Gestion de Cobro</spanclass></a></li>
+                <li><a href="#"><div id="picture_manager"></div>  <span class="interface">Cuadre del Cobrador</span></a></li>
+                <li><a href="#"><div id="consultas" class="tab" ></div>  <span>Consultas</span></a></li>
+                <li><a href="#"><div id="picture_manager"></div>  <span class="interface">Creditos Vigentes</span></a></li>
+                <li><a href="#"><div id="picture_manager"></div>  <span class="interface">Estado Cuenta</span></a></li>
+                <li><a href="#"><div id="picture_manager"></div>  <span class="interface">Clientes</span></a></li>
+
+            </ul>
+
+
+
+
+
+
+
+
+
+
+            <h3>
+                <ul class="navigation">
+                    <li>
+                        <div id="user_management" class="module"></div><span>Seguridad</span>
+                        <ul class="sub_navigation">
+                            <li><a href="#">Entrada de Datos</a></li>
+                            <li><a href="#">Registro de Contrato</a></li>
+                            <li><a href="#">Registro de Cliente</a></li>
+                            <li><a href="#">Recibo Definitivo</a></li>
+                            <li><a href="#">Gestion de Cobro</a></li>
+                            <li><a href="#">Cuadre del Cobrador</a></li>
+                            <li><a href="#">Consultas</a></li>
+                            <li><a href="#">Creditos Vigentes</a></li>
+                            <li><a href="#">Estado Cuenta</a></li>
+                            <li><a href="#">Clientes</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </h3>
+            <ul class="navigation">
+                <li><a href="#"><div id="entrada_datos" class="tab"></div>        <span>Entrada de Datos</span></a></li>
+                <li><a href="#"><div id="ae"></div>               <span class="interface">Registro de Contrato</span></a></li>
+                <li><a href="#"><div id="assing_study"></div>     <span class="interface">Registro de Cliente</span></a></li>
+                <li><a href="#"><div id="picture_manager"></div>  <span class="interface">Recibo Definitivo</span></a></li>
+                <li><a href="#"><div id="picture_manager"></div>  <span class="interface">Gestion de Cobro</spanclass></a></li>
+                <li><a href="#"><div id="picture_manager"></div>  <span class="interface">Cuadre del Cobrador</span></a></li>
+                <li><a href="#"><div id="consultas" class="tab"></div>  <span>Consultas</span></a></li>
+                <li><a href="#"><div id="picture_manager"></div>  <span class="interface">Creditos Vigentes</span></a></li>
+                <li><a href="#"><div id="picture_manager"></div>  <span class="interface">Estado Cuenta</span></a></li>
+                <li><a href="#"><div id="picture_manager"></div>  <span class="interface">Clientes</span></a></li>
 
             </ul>
 
@@ -214,7 +237,7 @@
                 <li><a href="#"><div id="assing_study"></div><span>Item3</span></a></li>
                 <li><a href="#"><div id="picture_manager"></div><span>Item4</span></a></li>
 
-            </ul>*@
+            </ul>
 
 
 

@@ -3023,7 +3023,7 @@ div#aside_navigation ul.navigation li a{
 float: left;
 width: 100%;
 height: auto;
-padding: 5px 0px;
+padding: 0px 0px;
 font-family: Lato-Regular, Arial;
 color:#fff;
 font-size: 14px;
@@ -3033,7 +3033,7 @@ div#aside_navigation ul.navigation li a:hover{
 background: #4e606d;
 }
 
-div#aside_navigation ul.navigation li div{
+div#aside_navigation ul.navigation li div#colapsar_nav{
 float: left;
 width:28px;
 height:26px;
@@ -3068,8 +3068,9 @@ background: url(./images/nav_icons_17.png) center no-repeat;
 opacity:0.9!important;
 }
 
-div#aside_navigation ul.navigation li div#user_logs{
-background: url(./images/nav_icons_05.png) center no-repeat;
+div#aside_navigation ul.navigation li div#entrada_datos{
+    /*width: 10px;*/
+/*background: url(./images/nav_icons_05.png) center no-repeat;*/
 }
 
 div#aside_navigation ul.navigation li div#assing_study{
@@ -3109,6 +3110,36 @@ div#aside_navigation ul.navigation li a.menu_closed div#colapsar_nav{
 background: url(./images/nav_icons_10-r.png) center no-repeat;
 }
 
+
+/**Tabs**/
+div.tab{
+    width: 10px;
+    height: 1px;
+    float: left;
+    margin: 0px 0px;
+    background:transparent;
+
+}
+/**Module**/
+div.module{
+  float: left;
+  width: 28px;
+  height: 26px;
+  font-size: 90%;
+  background: #ccc;
+  margin: 0px 8px;
+
+}
+/**Interface**/
+span.interface{
+  float: left;
+  width: auto;
+  height: 26px;
+  font-size: 90%;
+  background: transparent;
+  margin: 0px 20px;
+
+}
 
 /**SubMenu**/
 ul.navigation ul.sub_navigation{

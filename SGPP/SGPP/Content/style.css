@@ -3035,10 +3035,10 @@ background: #4e606d;
 
 div#aside_navigation ul.navigation li div{
 float: left;
-width:28px;
+width:20px;
 height:26px;
 background: #ccc;
-margin:0px 8px;
+margin:0px 0px;
 }
 
 div#aside_navigation ul.navigation li span{
@@ -3048,28 +3048,28 @@ height: auto;
 }
 
 div#aside_navigation ul.navigation li div#user_inf{
-background: url(./images/nav_icons_11.png) center no-repeat;
+/*background: url(./images/nav_icons_11.png) center no-repeat;*/
 }
 
 div#aside_navigation ul.navigation li div#dashboard{
-background: url(./images/nav_icons_01.png) center no-repeat;
+/*background: url(./images/nav_icons_01.png) center no-repeat;*/
 }
 
 div#aside_navigation ul.navigation li div#study{
-background: url(./images/nav_icons_02.png) center no-repeat;
+/*background: url(./images/nav_icons_02.png) center no-repeat;*/
 }
 
 div#aside_navigation ul.navigation li div#repports{
-background: url(./images/nav_icons_03.png) center no-repeat;
+/*background: url(./images/nav_icons_03.png) center no-repeat;*/
 }
 
 div#aside_navigation ul.navigation li div#ae{
-background: url(./images/nav_icons_17.png) center no-repeat;
+/*background: url(./images/nav_icons_17.png) center no-repeat;*/
 opacity:0.9!important;
 }
 
 div#aside_navigation ul.navigation li div#user_logs{
-background: url(./images/nav_icons_05.png) center no-repeat;
+/*background: url(./images/nav_icons_05.png) center no-repeat;*/
 }
 
 div#aside_navigation ul.navigation li div#assing_study{

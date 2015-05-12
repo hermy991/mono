@@ -22,7 +22,8 @@ namespace SGPP
             //            "~/Scripts/modernizr-*"));
 
             bundles.Add(new StyleBundle("~/content/bootstrap").Include("~/Content/bootstrap.css"));
-            bundles.Add(new StyleBundle("~/content/style").Include("~/Content/style.css"));
+            //bundles.Add(new StyleBundle("~/content/style").Include("~/Content/style.css"));
+            bundles.Add(new StyleBundle("~/content/local_framework").Include("~/Content/local_framework.css"));
 
             //bundles.Add(new StyleBundle("~/Content/themes/base/css").Include(
             //            "~/Content/themes/base/jquery.ui.core.css",

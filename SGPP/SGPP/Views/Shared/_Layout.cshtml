@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     @Styles.Render("~/content/bootstrap")
-    @Styles.Render("~/content/style")
+    @Styles.Render("~/content/local_framework")
 
 
     @*<link rel="stylesheet" type="text/css" href="../css/bootstrap.css" media="all" title="Bootstrap" />
@@ -27,8 +27,10 @@
         jQuery(document).ready(function () {
             $("#accordion").accordion({
                 heightStyle: "content",
+                animate: 100,
                 collapsible: true/*,
 		      active: 1*/
+                
             });
 
             organizeMenu();

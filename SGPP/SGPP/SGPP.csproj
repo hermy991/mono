@@ -40,16 +40,17 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
       <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.dll</HintPath>
-      <Private>True</Private>
     </Reference>
     <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
       <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.SqlServer.dll</HintPath>
-      <Private>True</Private>
     </Reference>
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="System" />
     <Reference Include="System.Data" />
+    <Reference Include="System.Data.Entity" />
     <Reference Include="System.Drawing" />
     <Reference Include="System.Runtime.Serialization" />
     <Reference Include="System.Security" />
@@ -133,144 +134,140 @@
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\WebApiConfig.cs" />
     <Compile Include="Controllers\PublicController.cs" />
-    <Compile Include="Controllers\UserControlController.cs" />
+    <Compile Include="Controllers\UserController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="GSPPModels\DEF\CPerson.cs" />
+    <Compile Include="GSPPModels\UC\CAuth.cs" />
+    <Compile Include="GSPPModels\UC\CCompany.cs" />
+    <Compile Include="GSPPModels\UC\CLogin.cs" />
+    <Compile Include="GSPPModels\UC\CUser.cs" />
     <Compile Include="Models\Address.cs">
-      <DependentUpon>SGPPModelEntity.tt</DependentUpon>
+      <DependentUpon>SGPPEntityModel.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\Archive.cs">
-      <DependentUpon>SGPPModelEntity.tt</DependentUpon>
+      <DependentUpon>SGPPEntityModel.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\Branch.cs">
-      <DependentUpon>SGPPModelEntity.tt</DependentUpon>
+      <DependentUpon>SGPPEntityModel.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\City.cs">
-      <DependentUpon>SGPPModelEntity.tt</DependentUpon>
+      <DependentUpon>SGPPEntityModel.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\Company.cs">
-      <DependentUpon>SGPPModelEntity.tt</DependentUpon>
+      <DependentUpon>SGPPEntityModel.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\Contact.cs">
-      <DependentUpon>SGPPModelEntity.tt</DependentUpon>
+      <DependentUpon>SGPPEntityModel.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\ContactInfo.cs">
-      <DependentUpon>SGPPModelEntity.tt</DependentUpon>
+      <DependentUpon>SGPPEntityModel.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\Contract.cs">
-      <DependentUpon>SGPPModelEntity.tt</DependentUpon>
+      <DependentUpon>SGPPEntityModel.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\Customer.cs">
-      <DependentUpon>SGPPModelEntity.tt</DependentUpon>
+      <DependentUpon>SGPPEntityModel.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\Detail.cs">
-      <DependentUpon>SGPPModelEntity.tt</DependentUpon>
+      <DependentUpon>SGPPEntityModel.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\DocumentDetail.cs">
-      <DependentUpon>SGPPModelEntity.tt</DependentUpon>
+      <DependentUpon>SGPPEntityModel.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\DocumentHeader.cs">
-      <DependentUpon>SGPPModelEntity.tt</DependentUpon>
+      <DependentUpon>SGPPEntityModel.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\Employee.cs">
-      <DependentUpon>SGPPModelEntity.tt</DependentUpon>
+      <DependentUpon>SGPPEntityModel.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\GetDetails_Result.cs">
-      <DependentUpon>SGPPModelEntity.tt</DependentUpon>
+      <DependentUpon>SGPPEntityModel.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\GetRowMessage_Result.cs">
-      <DependentUpon>SGPPModelEntity.tt</DependentUpon>
+      <DependentUpon>SGPPEntityModel.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\Header.cs">
-      <DependentUpon>SGPPModelEntity.tt</DependentUpon>
+      <DependentUpon>SGPPEntityModel.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\Interface.cs">
-      <DependentUpon>SGPPModelEntity.tt</DependentUpon>
+      <DependentUpon>SGPPEntityModel.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\Message.cs">
-      <DependentUpon>SGPPModelEntity.tt</DependentUpon>
+      <DependentUpon>SGPPEntityModel.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\Notification.cs">
-      <DependentUpon>SGPPModelEntity.tt</DependentUpon>
+      <DependentUpon>SGPPEntityModel.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\Object.cs">
-      <DependentUpon>SGPPModelEntity.tt</DependentUpon>
+      <DependentUpon>SGPPEntityModel.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\Password.cs">
-      <DependentUpon>SGPPModelEntity.tt</DependentUpon>
+      <DependentUpon>SGPPEntityModel.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\Payment.cs">
-      <DependentUpon>SGPPModelEntity.tt</DependentUpon>
+      <DependentUpon>SGPPEntityModel.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\Permission.cs">
-      <DependentUpon>SGPPModelEntity.tt</DependentUpon>
+      <DependentUpon>SGPPEntityModel.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\Person.cs">
-      <DependentUpon>SGPPModelEntity.tt</DependentUpon>
+      <DependentUpon>SGPPEntityModel.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\Profile.cs">
-      <DependentUpon>SGPPModelEntity.tt</DependentUpon>
+      <DependentUpon>SGPPEntityModel.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\ProvisionHeader.cs">
-      <DependentUpon>SGPPModelEntity.tt</DependentUpon>
+      <DependentUpon>SGPPEntityModel.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\Region.cs">
-      <DependentUpon>SGPPModelEntity.tt</DependentUpon>
+      <DependentUpon>SGPPEntityModel.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\Sector.cs">
-      <DependentUpon>SGPPModelEntity.tt</DependentUpon>
+      <DependentUpon>SGPPEntityModel.tt</DependentUpon>
     </Compile>
-    <Compile Include="Models\SGPPModelEntity.Context.cs">
+    <Compile Include="Models\SGPPEntityModel.Context.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>SGPPModelEntity.Context.tt</DependentUpon>
+      <DependentUpon>SGPPEntityModel.Context.tt</DependentUpon>
     </Compile>
-    <Compile Include="Models\SGPPModelEntity.cs">
+    <Compile Include="Models\SGPPEntityModel.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>SGPPModelEntity.tt</DependentUpon>
+      <DependentUpon>SGPPEntityModel.tt</DependentUpon>
     </Compile>
-    <Compile Include="Models\SGPPModelEntity.Designer.cs">
+    <Compile Include="Models\SGPPEntityModel.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>SGPPModelEntity.edmx</DependentUpon>
+      <DependentUpon>SGPPEntityModel.edmx</DependentUpon>
     </Compile>
     <Compile Include="Models\Split_Result.cs">
-      <DependentUpon>SGPPModelEntity.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Models\sp_helpdiagramdefinition_Result.cs">
-      <DependentUpon>SGPPModelEntity.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Models\sp_helpdiagrams_Result.cs">
-      <DependentUpon>SGPPModelEntity.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Models\sysdiagram.cs">
-      <DependentUpon>SGPPModelEntity.tt</DependentUpon>
+      <DependentUpon>SGPPEntityModel.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\User.cs">
-      <DependentUpon>SGPPModelEntity.tt</DependentUpon>
+      <DependentUpon>SGPPEntityModel.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\V_Access.cs">
-      <DependentUpon>SGPPModelEntity.tt</DependentUpon>
+      <DependentUpon>SGPPEntityModel.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\V_DocumentType.cs">
-      <DependentUpon>SGPPModelEntity.tt</DependentUpon>
+      <DependentUpon>SGPPEntityModel.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\V_Module.cs">
-      <DependentUpon>SGPPModelEntity.tt</DependentUpon>
+      <DependentUpon>SGPPEntityModel.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\V_Person.cs">
-      <DependentUpon>SGPPModelEntity.tt</DependentUpon>
+      <DependentUpon>SGPPEntityModel.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\V_Sex.cs">
-      <DependentUpon>SGPPModelEntity.tt</DependentUpon>
+      <DependentUpon>SGPPEntityModel.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\V_Tab.cs">
-      <DependentUpon>SGPPModelEntity.tt</DependentUpon>
+      <DependentUpon>SGPPEntityModel.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\Warranty.cs">
-      <DependentUpon>SGPPModelEntity.tt</DependentUpon>
+      <DependentUpon>SGPPEntityModel.tt</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -503,23 +500,6 @@
     <Content Include="Content\themes\base\minified\jquery.ui.theme.min.css" />
     <Content Include="Global.asax" />
     <Content Include="Content\Site.css" />
-    <EntityDeploy Include="Models\SGPPModelEntity.edmx">
-      <Generator>EntityModelCodeGenerator</Generator>
-      <LastGenOutput>SGPPModelEntity.Designer.cs</LastGenOutput>
-    </EntityDeploy>
-    <Content Include="Models\SGPPModelEntity.Context.tt">
-      <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>SGPPModelEntity.edmx</DependentUpon>
-      <LastGenOutput>SGPPModelEntity.Context.cs</LastGenOutput>
-    </Content>
-    <Content Include="Models\SGPPModelEntity.edmx.diagram">
-      <DependentUpon>SGPPModelEntity.edmx</DependentUpon>
-    </Content>
-    <Content Include="Models\SGPPModelEntity.tt">
-      <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>SGPPModelEntity.edmx</DependentUpon>
-      <LastGenOutput>SGPPModelEntity.cs</LastGenOutput>
-    </Content>
     <Content Include="Content\fonts\Lato-Bold.ttf" />
     <Content Include="Content\fonts\Lato-Light.ttf" />
     <Content Include="Content\fonts\Lato-Regular_0.ttf" />
@@ -553,6 +533,31 @@
   </ItemGroup>
   <ItemGroup>
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Repository\DEF\" />
+    <Folder Include="Repository\UC\" />
+  </ItemGroup>
+  <ItemGroup>
+    <EntityDeploy Include="Models\SGPPEntityModel.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>SGPPEntityModel.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Models\SGPPEntityModel.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>SGPPEntityModel.edmx</DependentUpon>
+      <LastGenOutput>SGPPEntityModel.Context.cs</LastGenOutput>
+    </Content>
+    <Content Include="Models\SGPPEntityModel.edmx.diagram">
+      <DependentUpon>SGPPEntityModel.edmx</DependentUpon>
+    </Content>
+    <Content Include="Models\SGPPEntityModel.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>SGPPEntityModel.edmx</DependentUpon>
+      <LastGenOutput>SGPPEntityModel.cs</LastGenOutput>
+    </Content>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

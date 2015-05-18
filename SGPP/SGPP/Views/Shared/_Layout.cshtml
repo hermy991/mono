@@ -138,8 +138,8 @@
                         <li><a href="#" id="full_screen" class="top_bar_icons">Full Screen</a></li>
                         <li><input type="text" id="search_top" /></li>
                         <li><a href="#" id="settings" class="top_bar_icons">Settings</a></li>
-                        <li><a href="#" id="user_info" class="top_bar_icons">User info</a></li>
-                        <li>@Html.ActionLink("Registrarse", "CreateUserView", "User", routeValues: null, htmlAttributes: new { id = "user_info" })</li>
+                        @*<li><a href="#" id="user_info" class="top_bar_icons">User info</a></li>*@
+                        <li>@Html.ActionLink("d", "CreateUserView", "User", null, new { @id = "user_info", @class="top_bar_icons" })</li>
                         <li><a href="#" id="log_out" class="top_bar_icons">Cerrar sesión</a></li>
                     </ul>
                 </div>
@@ -150,7 +150,7 @@
 
             <div id="navigation_reference" class="close_menu">
 
-                @Html.Partial("~/Views/Public/Navigation.cshtml")
+                @Html.Partial("~/Views/Home/Navigation.cshtml")
 
                 <div id="the_content_area_right_wrap">
                     <div class="col-lg-12 pl0">

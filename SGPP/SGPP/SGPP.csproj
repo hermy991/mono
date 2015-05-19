@@ -540,7 +540,7 @@
     <Content Include="Views\Home\Login.cshtml" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Views\User\CreateUserView.cshtml" />
+    <Content Include="Views\User\CreateUser.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Views\Shared\LoginPartial.cshtml" />
@@ -570,6 +570,9 @@
       <DependentUpon>SGPPEntityModel.edmx</DependentUpon>
       <LastGenOutput>SGPPEntityModel.cs</LastGenOutput>
     </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\Home\Login2.cshtml" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

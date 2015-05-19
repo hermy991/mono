@@ -953,7 +953,7 @@ float:left;
 width: 100%;
 padding-bottom:6px;
 font-family: Lato-Bold, Lato-Regular, Arial;
-font-size:18px;
+font-size:15px;
 color:#1c2749;
 background: url(./images/titles_botton_line.png) left bottom repeat-x;
 }
@@ -1314,12 +1314,12 @@ color:#757575;
 
 input[type='text'], input[type='password'],
 input[type='email'], textarea, select{
-padding:6px; 
+ 
 border:1px solid #dfdfdf;
 border-radius:4px;
 background:#fff url(./images/input_text_bg.png) left bottom repeat-x;
 font-family: Lato-Regular, Arial;
-font-size: 12px;
+font-size: 14px;
 color:#525252;
 -webkit-transition:box-shadow 1s, background 1s;
 -moz-transition:box-shadow 1s, background 1s;
@@ -2050,7 +2050,7 @@ border-bottom:1px solid #EBEBEB;
 color: #84909A;
 float: left;
 font-family: lato-bold,arial;
-font-size: 30px;
+font-size: 20px;
 margin-right: 35px;
 }
 

@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="8545849d55814216848865cf38ccc1db" Name="Diagram1">
+        <EntityTypeShape EntityType="SGPPModel.Archive" Width="1.5" PointX="5.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="SGPPModel.Contract" Width="1.5" PointX="12.75" PointY="4.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="SGPPModel.Customer" Width="1.5" PointX="7.5" PointY="4.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="SGPPModel.DocumentDetail" Width="1.5" PointX="12.75" PointY="8.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="SGPPModel.DocumentHeader" Width="1.5" PointX="9.75" PointY="12.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="SGPPModel.Payment" Width="1.5" PointX="0.75" PointY="13.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="SGPPModel.ProvisionHeader" Width="1.5" PointX="11.75" PointY="13.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="SGPPModel.Warranty" Width="1.5" PointX="13.75" PointY="13.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="SGPPModel.Address" Width="1.5" PointX="14.75" PointY="4.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="SGPPModel.City" Width="1.5" PointX="12" PointY="1" IsExpanded="true" />
+        <EntityTypeShape EntityType="SGPPModel.ContactInfo" Width="1.5" PointX="15.75" PointY="10.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="SGPPModel.Detail" Width="1.5" PointX="3" PointY="7.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="SGPPModel.Employee" Width="1.5" PointX="9.75" PointY="4.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="SGPPModel.Header" Width="1.5" PointX="0.75" PointY="8.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="SGPPModel.Notification" Width="1.5" PointX="15.75" PointY="14.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="SGPPModel.Object" Width="1.5" PointX="16.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="SGPPModel.Person" Width="1.5" PointX="5.25" PointY="7.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="SGPPModel.Region" Width="1.5" PointX="9.75" PointY="1.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="SGPPModel.Sector" Width="1.5" PointX="14.25" PointY="1" IsExpanded="true" />
+        <EntityTypeShape EntityType="SGPPModel.Branch" Width="1.5" PointX="16.75" PointY="4.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="SGPPModel.Company" Width="1.5" PointX="3" PointY="2.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="SGPPModel.Interface" Width="1.5" PointX="5.25" PointY="12.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="SGPPModel.Message" Width="1.5" PointX="0.75" PointY="17.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="SGPPModel.Password" Width="1.5" PointX="7.5" PointY="7.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="SGPPModel.Permission" Width="1.5" PointX="7.5" PointY="12.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="SGPPModel.Profile" Width="1.5" PointX="2.75" PointY="17.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="SGPPModel.User" Width="1.5" PointX="10.5" PointY="7.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="SGPPModel.Contact" Width="1.5" PointX="4.75" PointY="17.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="SGPPModel.V_DocumentType" Width="1.5" PointX="6.75" PointY="17.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="SGPPModel.V_Person" Width="1.5" PointX="17.75" PointY="8.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="SGPPModel.V_Sex" Width="1.5" PointX="8.75" PointY="17.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="SGPPModel.V_Access" Width="1.5" PointX="10.75" PointY="17.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="SGPPModel.V_Module" Width="1.5" PointX="12.75" PointY="17.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="SGPPModel.V_Tab" Width="1.5" PointX="17.75" PointY="13.75" IsExpanded="true" />
+        <AssociationConnector Association="SGPPModel.FK_Customer_Person" ManuallyRouted="false" />
+        <AssociationConnector Association="SGPPModel.FK_City_Region" ManuallyRouted="false" />
+        <AssociationConnector Association="SGPPModel.FK_Sector_City" ManuallyRouted="false" />
+        <AssociationConnector Association="SGPPModel.FK_Detail_Header" ManuallyRouted="false" />
+        <AssociationConnector Association="SGPPModel.FK_Interface_DetailModule" ManuallyRouted="false" />
+        <AssociationConnector Association="SGPPModel.FK_Interface_DetailTab" ManuallyRouted="false" />
+        <AssociationConnector Association="SGPPModel.FK_Password_DetailStatus" ManuallyRouted="false" />
+        <AssociationConnector Association="SGPPModel.FK_Person_DetailIDType" ManuallyRouted="false" />
+        <AssociationConnector Association="SGPPModel.FK_Person_DetailSex" ManuallyRouted="false" />
+        <AssociationConnector Association="SGPPModel.FK_User_DetailAccess" ManuallyRouted="false" />
+        <AssociationConnector Association="SGPPModel.FK_User_DetailStatus" ManuallyRouted="false" />
+        <AssociationConnector Association="SGPPModel.FK_Password_Person" ManuallyRouted="false" />
+        <AssociationConnector Association="SGPPModel.FK_Person_Company" ManuallyRouted="false" />
+        <AssociationConnector Association="SGPPModel.FK_User_PersonPerson" ManuallyRouted="false" />
+        <AssociationConnector Association="SGPPModel.FK_Permission_Company" ManuallyRouted="false" />
+        <AssociationConnector Association="SGPPModel.FK_Permission_Program" ManuallyRouted="false" />
+        <AssociationConnector Association="SGPPModel.FK_Permission_User" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

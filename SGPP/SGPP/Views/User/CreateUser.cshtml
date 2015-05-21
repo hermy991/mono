@@ -1,0 +1,94 @@
+﻿@model SGPP.GSPPModels.UC.CUser
+@{
+    ViewBag.Title = "Registro de Usuario";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="section_title_metro fluid_wrap">
+    <ul class="col-lg-8 pl0">
+        <li class="fl">
+            <h1 class="the_title_metro">Registrar Usuario</h1>
+        </li>
+    </ul>
+</div>
+ 
+<div id="dashboard_right_column" class="right_column_metro col-lg-12 pr0 pl0">
+    <div class="drag_and_drop_container fluid_wrap reset doc_en_proceso">
+        @*<div class="drag_container_title">
+                <h2>Información</h2>
+            </div>*@
+       
+        <div class="drag_container_the_content_area drag_content_area_fluid_wrap">
+            <form id="" class="standard_form fluid_wrap">
+                <ul class="form_items_container col-lg-4 pr0">
+                    <label class="subtitle_label">Información de Compañia</label>
+
+                    @*<li>
+                            <h style="color: red">@ViewBag.CreateUserError</h>
+                        </li>*@
+                    <li>
+                        @Html.LabelFor(model => model.Person.Company.DisplayName)
+                        @Html.TextBoxFor(model => model.Person.Company.DisplayName, new { @class = "col-lg-12 form-control" })
+                        @Html.ValidationMessageFor(model => model.Person.Company.DisplayName)
+                    </li>
+                    <li>
+                        @Html.LabelFor(model => model.Person.Company.Local)
+                        @Html.TextBoxFor(model => model.Person.Company.Local, new { @class = "col-lg-12 form-control" })
+                        @Html.ValidationMessageFor(model => model.Person.Company.Local)
+                    </li>
+                </ul>
+                <ul class="form_items_container col-lg-4 pr0">
+                    <label class="subtitle_label">Información del Usuario</label>
+                    <li>
+                        @Html.LabelFor(model => model.Person.FirstName)
+                        @Html.TextBoxFor(model => model.Person.FirstName, new { @class = "col-lg-12 form-control" })
+                        @Html.ValidationMessageFor(model => model.Person.FirstName)
+                    </li>
+                    <li>
+                        @Html.LabelFor(model => model.Person.LastName)
+                        @Html.TextBoxFor(model => model.Person.LastName, new { @class = "col-lg-12 form-control" })
+                        @Html.ValidationMessageFor(model => model.Person.LastName)
+                    </li>
+                    <li>
+                        @Html.LabelFor(model => model.Person.DocumentTypeId)
+                        @Html.DropDownList("IDType_ID", "-Seleccionar-")
+                        @Html.ValidationMessageFor(model => model.Person.DocumentTypeId)
+                    </li>
+                    <li>
+                        @Html.LabelFor(model => model.Person.DocumenTypeDesc)
+                        @Html.TextBoxFor(model => model.Person.DocumenTypeDesc, new { @class = "col-lg-12 form-control" })
+                        @Html.ValidationMessageFor(model => model.Person.DocumenTypeDesc)
+                    </li>
+                    <li>
+                        @Html.LabelFor(model => model.Person.Sex_ID)
+                        @Html.DropDownList("Sex_ID", "-Seleccionar-")
+                        @Html.ValidationMessageFor(model => model.Person.Sex_ID)
+                    </li>
+                </ul>
+                <ul class="form_items_container col-lg-4 pr0">
+                    <label class="subtitle_label">Información de Contacto</label>
+                    <li>
+                        @Html.LabelFor(model => model.Email)
+                        @Html.TextBoxFor(model => model.Login.UserName, new { @class = "col-lg-12 form-control" })
+                        @Html.ValidationMessageFor(model => model.Login.UserName)
+                    </li>
+                    <li>
+                        @Html.LabelFor(model => model.Login.Pass)
+                        @Html.TextBoxFor(model => model.Login.Pass, new { @class = "col-lg-12 form-control" })
+                        @Html.ValidationMessageFor(model => model.Login.Pass)
+                    </li>
+                    <li>
+                        Repetir @Html.LabelFor(model => model.Login.PassRep)
+                        @Html.TextBoxFor(model => model.Login.PassRep, new { @class = "col-lg-12 form-control" })
+                        @Html.ValidationMessageFor(model => model.Login.PassRep)
+                    </li>
+                    <li class="fr">
+                        <input type="submit" class="button_go_back btstyles col-lg-3 fr mn" value="Cancelar" formaction="/Home/Index" />
+                        <input type="submit" class="button_save btstyles col-lg-3 fr mn mn_minus" value="Registrar" formaction="/User/CreateUser" />
+                    </li>
+                </ul>
+
+            </form><!--end eis_form-->
+        </div><!--end drag_container_the_content_area-->
+    </div><!--end drag_and_drop_container-->
+</div><!--end dashboard_right_column-->
